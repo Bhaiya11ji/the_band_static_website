@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.onBigScreen, .onSmallScreen {
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+.onSmallScreen {
+    display: none;
+}
+
+.menuList, .menuList2 {
+    display: flex;
+    align-items: center;
+}
+.menuList a, .menuList2 a {
+    text-decoration: none;
+    padding: 14px 22px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+    transition: .2s all ease;
+}
+.menuList a:hover {
+    background-color: grey;
+}
+.menuList2 a:hover {
+    color: crimson;
+}
+
+.onSmallScreen .menuList2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* menu btn bars styling  */
+.menuBtn {
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    cursor: pointer;
+}
+.btnBar {
+    width: 15px;
+    height: 2px;
+    margin: 4px;
+    background-color: white;
+}
+ /* logo styling  */
+
+.logo {
+    display: flex;
+    align-items: center;
+ }
+.logo a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 1.4rem;
+}
+.logo a span {
+    color: crimson;
+}
+
+
+/* images styling goes here  */
+.imgContainer {
+    margin: 46px 0px;
+    z-index: -1;
+}
+.imgCont img {
+    width: 100%;
+}
+.imgCont {
+    position: relative;
+    animation-name: fade;
+    animation-duration: .3s;
+}
+
+@keyframes fade {
+    from{opacity: .8;}
+    to{opacity: 1;}
+}
+
+.imgInfo {
+    position: absolute;
+    top: 85%;    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.imgInfo h2, .imgInfo p {
+    color: white;
+    margin: 1vw;
+}
+.imgInfo h2 {
+    font-weight: 400;
+
+}
+
+
+/* styling middel introduction part   */
+.intro h1::before {
+    content: "-";
+    color: white;
+    user-select: none;
+    display: block;
+    margin: 15px auto;
+}
+.intro {
+    width: 100%;
+    text-align: center;
+}
+.intro span {
+    color: grey;
+}
+.intro h1 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin: 2vw auto;
+}
+.intro p {
+    margin: 2vw;
+    text-align: justify;
+}
+
+/* intro cards styling */
+
+.teamIntroCont {
+    max-width: 80%;
+    margin: auto;
+}
+.teamIntro {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.introCards img {
+    width: 100%;
+    margin: 2vw auto;
+}
+.introCards {
+    text-align: center;
+    width: 20%;
+    margin: 20px auto;
+}
+
+
+
+
+/* screen when width is less than 600px */
+
+@media (max-width: 600px) {
+    .onBigScreen {
+        display: none;
+    }
+    .onSmallScreen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menuList2  {
+        max-height: 0;
+        transition: .3s all ease;
+        overflow: hidden;
+    }
+    .introCards {
+        width: 250px;
+    }
+}
+
+
+/* tour details styling code goes here  */
+
+.tourDatesContainer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+}
+
+.tourHeader {
+    text-align: center;
+    margin: 2vw auto;
+}
+.tourHeader h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 10px;
+    color: white;
+    margin: 2vw auto;
+}
+.tourHeader span {
+    color: rgb(200, 200, 200);
+}
+
+.tourMonthContainer {
+    width: 75%;
+    background-color: #fff;
+    margin: auto;
+}
+.tourMonthPanel {
+    border-bottom: 1px solid grey;
+    padding: 1vw;
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
+
+.tourPlaceCards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 2vw auto;
+    justify-content: space-between;
+}
+.tourCards {
+    width: 30%;
+    max-width: 300px;
+    background-color: #fff;
+}
+.tourCardInfo {
+    padding: 1vw;
+}
+.tourCardInfo h4 {
+    margin: 1.5vw auto;
+}
+#tourDate {
+    color: grey;
+}
+.tourCardInfo p {
+    margin: 1vw auto;
+}
+.tourCardInfo button {
+    outline: none;
+    color: white;
+    background-color: black;
+    padding: 10px 12px;
+    cursor: pointer;
+    border: none;
+}
+.tourCardInfo button:hover {
+    color: black;
+    background-color: rgb(165, 165, 165);
+}
+
+.tourCards img {
+    width: 100%;
+}
+
+/* contact styling goes here  */
+.contactContainer h1::before {
+    content: "-";
+    color: white;
+    display: block;
+    margin: 10px auto;
+}
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+}
+.contactContainer img {
+    width: 100%;
+    margin: 3.5vw auto;
+}
+.contactContainer h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin: 1vw auto;
+    text-align: center;
+}
+.contactContainer span {
+    color: grey;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 4vw auto;
+}
+.contactForm form {
+    text-align: right;
+}
+.inputField input {
+    padding: 10px 12px;
+    border: 1px solid grey;
+    margin: 5px auto;
+    width: 150px;
+}
+#contactMsg {
+    width: 330px;
+}
+#sendBtn {
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+}
+
+.contactInfo ul li {
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+/* footer styling goes here  */
+
+footer header {
+    width: 200px;
+    margin: 5vw auto;
+    text-align: center;
+    color: grey;
+}
+footer header a {
+    color: grey;
+}
+.footerLinks {
+    width: 30%;
+    margin: 3vw auto;
+    text-align: center;
+}
+.footerLinks a {
+    color: grey;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width:600px) {
+    .tourCards {
+        width: 100%;
+        margin: 2vw auto;
+    }
+    .inputField input {
+        width: 90%;
+    }
+    #contactMsg {
+        width: 90%;
+    }
+    .contactForm form {
+        margin: 4vw auto;
+        text-align: center;
+    }
+    .contactInfo {
+        margin: auto;
+    }
+    .imgInfo {
+        display: none;
+    }
+}
